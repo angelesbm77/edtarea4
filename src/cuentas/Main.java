@@ -9,10 +9,22 @@ package cuentas;
  * @author ANGELES
  */
 public class Main {
+
+    /**
+     * Método Main
+     * @param args
+     */
     public static void main(String[] args) {
         operativa_cuenta(0);
     }
-
+/**
+ * Metodo al que se le pasa como parámetro
+ * @param cantidad 
+ * y crea una cuenta 
+ * se llama al metrodo saldoActual() 
+ * al método retirar()
+ * y al método ingresar()
+ */
     private static void operativa_cuenta(float cantidad) {
         
         CCuenta cuenta1;

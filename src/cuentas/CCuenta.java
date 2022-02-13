@@ -5,39 +5,67 @@
 package cuentas;
 
 /**
- *
+ * Clase CCuenta 
  * @author ANGELES
  */
+
 public class CCuenta {
 
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInteres;
-
+/**
+ * Constructor vacío de la clase
+ * CCuenta
+ */
     public CCuenta()
     {
     }
-
+/**
+ * Constructo CCuenta recibiendo como parámetros
+ * @param nom
+ * @param cue
+ * @param sal
+ * @param tipo 
+ */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
         cuenta=cue;
         saldo=sal;
     }
-
+/**
+ * Método que devuelve
+ * @return saldo
+ * de tipo double
+ */
     public double estado()
     {
         return getSaldo();
     }
-
+/**
+ * Metodo ingresar al que se le pasa como parámetro
+ * @param cantidad
+ * Esta cantidad se le suma al saldo de la cuenta
+ * @throws Exception 
+ * si la cantidad que se pasa como parámetro es 
+ * un número negativo, lanza una excepcion
+ */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
-
+/**
+ * Método retirar al que se le pasa como parámetro
+ * @param cantidad
+ * que se le resta al saldo
+ * @throws Exception 
+ * si la cantidad que se pasa como parámetro es 
+ * un número negativo, lanza una excepcion
+ */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -47,13 +75,14 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
      /**
+     * Método que devuelve el nombre de la cuenta
      * @return the nombre
      */
     public String getNombre() {
         return nombre;
     }
 
-    /**
+    /** Método al que se le pasa como parámetro
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -61,6 +90,7 @@ public class CCuenta {
     }
 
     /**
+     * Método que devuelve la cuenta
      * @return the cuenta
      */
     public String getCuenta() {
@@ -68,6 +98,7 @@ public class CCuenta {
     }
 
     /**
+     * Método al que se le pasa como parámetro
      * @param cuenta the cuenta to set
      */
     public void setCuenta(String cuenta) {
@@ -75,6 +106,7 @@ public class CCuenta {
     }
 
     /**
+     * Método que devuelve el salda
      * @return the saldo
      */
     public double getSaldo() {
@@ -82,6 +114,7 @@ public class CCuenta {
     }
 
     /**
+     * Método al que se le pasa el saldo como parámetro
      * @param saldo the saldo to set
      */
     public void setSaldo(double saldo) {
@@ -89,6 +122,7 @@ public class CCuenta {
     }
 
     /**
+     * Método que devuelve el tipo de interés
      * @return the tipoInteres
      */
     public double getTipoInteres() {
@@ -96,6 +130,7 @@ public class CCuenta {
     }
 
     /**
+     * Método al que se le pasa como parámetro
      * @param tipoInteres the tipoInteres to set
      */
     public void setTipoInteres(double tipoInteres) {
